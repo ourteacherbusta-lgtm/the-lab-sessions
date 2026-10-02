@@ -22,7 +22,7 @@ body{
 a{color:inherit;text-decoration:none}
 img{display:block}
 .site-header{
-  height:104px;
+  min-height:154px;
   padding:0 3vw;
   display:flex;
   align-items:center;
@@ -34,9 +34,9 @@ img{display:block}
   z-index:50;
 }
 .logo-shell{
-  width:212px;
-  height:92px;
-  overflow:hidden;
+  width:224px;
+  height:154px;
+  overflow:visible;
   position:relative;
   flex:0 0 auto;
 }
@@ -44,8 +44,8 @@ img{display:block}
   width:200px;
   height:auto;
   position:absolute;
-  left:0;
-  top:-53px;
+  left:12px;
+  top:-20px;
   max-width:none;
   filter:none!important;
   opacity:1!important;
@@ -403,14 +403,14 @@ footer small{
 .reveal.on{opacity:1;transform:none}
 
 @media(max-width:900px){
-  .site-header{height:88px}
-  .logo-shell{width:190px;height:82px}
-  .logo-shell img{width:180px;top:-48px}
+  .site-header{min-height:136px}
+  .logo-shell{width:194px;height:136px}
+  .logo-shell img{width:170px;left:12px;top:-15px}
   .menu{display:block}
   nav{
     display:none;
     position:absolute;
-    top:88px;left:0;right:0;
+    top:136px;left:0;right:0;
     background:var(--dark);
     padding:26px 3vw 34px;
     flex-direction:column;
