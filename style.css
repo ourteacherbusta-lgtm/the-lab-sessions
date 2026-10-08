@@ -590,3 +590,33 @@ footer small{
   .story-label p{font-size:20px}
   .story-grid{grid-template-columns:1fr 1fr}
 }
+
+/* Local TLS photo assets — originals are not altered */
+.hero-photo-local{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  background-image:url("assets/hero.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  filter:saturate(.9) contrast(1.03) brightness(.84);
+}
+.story-photo{
+  width:100%;
+  height:100%;
+  min-height:100%;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.story-photo-crowd{background-image:url("assets/crowd.jpg")}
+.story-photo-dj{background-image:url("assets/dj.jpg");filter:grayscale(1) contrast(1.05)}
+.story-photo-booth{background-image:url("assets/booth.jpg");filter:grayscale(1) contrast(1.05)}
+.story-grid figure:hover .story-photo-dj,
+.story-grid figure:hover .story-photo-booth{
+  filter:grayscale(.2) contrast(1.03);
+  transform:scale(1.025);
+}
+.story-photo-dj,.story-photo-booth{transition:filter .35s ease,transform .5s ease}
