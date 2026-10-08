@@ -591,17 +591,18 @@ footer small{
   .story-grid{grid-template-columns:1fr 1fr}
 }
 
-/* Local TLS photo assets — originals are not altered */
+
+/* Uploaded TLS photos — served directly by GitHub Pages */
 .hero-photo-local{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
-  background-image:url("assets/hero.jpg");
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_08%20p.m.jpg");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  filter:saturate(.9) contrast(1.03) brightness(.84);
+  filter:none;
 }
 .story-photo{
   width:100%;
@@ -611,12 +612,67 @@ footer small{
   background-position:center;
   background-repeat:no-repeat;
 }
-.story-photo-crowd{background-image:url("assets/crowd.jpg")}
-.story-photo-dj{background-image:url("assets/dj.jpg");filter:grayscale(1) contrast(1.05)}
-.story-photo-booth{background-image:url("assets/booth.jpg");filter:grayscale(1) contrast(1.05)}
+.story-photo-crowd{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_15%20p.m.jpg")}
+.story-photo-dj{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_51_07%20p.m.jpg");filter:none}
+.story-photo-booth{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_51%20p.m.jpg");filter:none}
 .story-grid figure:hover .story-photo-dj,
 .story-grid figure:hover .story-photo-booth{
-  filter:grayscale(.2) contrast(1.03);
-  transform:scale(1.025);
+  filter:none;
+  transform:scale(1.02);
 }
-.story-photo-dj,.story-photo-booth{transition:filter .35s ease,transform .5s ease}
+.story-photo-dj,.story-photo-booth{transition:transform .5s ease}
+
+.culture-split{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.72fr) minmax(0,1fr);
+  min-height:620px;
+  border-bottom:1px solid var(--line);
+  background:var(--paper-2);
+}
+.culture-photo{
+  min-height:620px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.culture-photo-community{
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_27%20p.m.jpg");
+  border-right:1px solid var(--line);
+}
+.culture-photo-movement{
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_39%20p.m.jpg");
+  border-left:1px solid var(--line);
+}
+.culture-copy{
+  padding:52px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.culture-copy h2{
+  margin:24px 0 28px;
+  font-size:clamp(48px,5.6vw,88px);
+  line-height:.88;
+  letter-spacing:-.055em;
+  font-weight:500;
+}
+.culture-copy>p:last-child{
+  margin:0;
+  max-width:430px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+@media(max-width:900px){
+  .culture-split{grid-template-columns:1fr 1fr}
+  .culture-copy{grid-column:1/-1;order:-1;min-height:380px}
+  .culture-photo{min-height:520px}
+  .culture-photo-community{border-right:1px solid var(--line)}
+  .culture-photo-movement{border-left:0}
+}
+@media(max-width:560px){
+  .culture-split{grid-template-columns:1fr}
+  .culture-copy{min-height:340px;padding:44px 4vw}
+  .culture-photo{min-height:430px;border:0;border-top:1px solid var(--line)}
+  .culture-copy h2{font-size:14vw}
+}
