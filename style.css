@@ -711,8 +711,8 @@ footer small{
 .founder-photo{
   min-height:640px;
   background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_20%20p.m.jpg");
-  background-size:cover;
-  background-position:center;
+  background-size:128%;
+  background-position:28% center;
   background-repeat:no-repeat;
   border-right:1px solid #33342f;
 }
@@ -771,7 +771,8 @@ footer small{
     min-height:560px;
     border-right:0;
     border-bottom:1px solid #33342f;
-    background-position:center;
+    background-size:135%;
+    background-position:30% center;
   }
   .founder-main{min-height:470px}
 }
