@@ -676,3 +676,110 @@ footer small{
   .culture-photo{min-height:430px;border:0;border-top:1px solid var(--line)}
   .culture-copy h2{font-size:14vw}
 }
+
+/* Four curated concepts — tighter editorial grid */
+.projects-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--line);
+}
+.projects-grid .project-card{
+  min-height:360px;
+  grid-template-columns:54px 1fr 38px;
+  gap:24px;
+  padding:36px 2.4vw;
+  border-bottom:1px solid var(--line);
+}
+.projects-grid .project-card:nth-child(odd){border-right:1px solid var(--line)}
+.projects-grid .project-main h3{
+  font-size:clamp(52px,5.9vw,92px);
+  line-height:.78;
+}
+.projects-grid .project-card:before{
+  width:25vw;
+  right:-10vw;
+  top:-8vw;
+}
+.projects-grid .project-card:nth-child(3){background:#f1f0ea}
+.projects-grid .project-card:nth-child(4){background:#e2e5d7}
+
+/* Bustamante founder split */
+.founder{
+  min-height:640px;
+  grid-template-columns:minmax(360px,42%) 1fr;
+}
+.founder-photo{
+  min-height:640px;
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_20%20p.m.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  border-right:1px solid #33342f;
+}
+.founder-main{
+  min-height:640px;
+  padding:48px 4vw 58px;
+  justify-content:space-between;
+}
+.founder-kicker{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+}
+.founder-copy{
+  margin-top:auto;
+}
+.founder-copy h2{
+  margin:0 0 34px;
+  font-size:clamp(68px,8.2vw,132px);
+  line-height:.8;
+  letter-spacing:-.065em;
+  font-weight:500;
+}
+.founder-copy p{
+  max-width:520px;
+  color:#b8b8b1;
+  font-size:15px;
+  line-height:1.6;
+}
+.founder-copy a{
+  display:inline-block;
+  margin-top:42px;
+  padding-bottom:8px;
+  border-bottom:1px solid #c9c9c2;
+  font:500 10px "IBM Plex Mono",monospace;
+  letter-spacing:.11em;
+}
+.section-breath{
+  height:clamp(70px,8vw,120px);
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+
+@media(max-width:900px){
+  .projects-grid{grid-template-columns:1fr}
+  .projects-grid .project-card{
+    min-height:300px;
+    grid-template-columns:50px 1fr 32px;
+    padding:30px 4vw;
+    border-right:0!important;
+  }
+  .projects-grid .project-main h3{font-size:clamp(58px,11vw,88px)}
+  .founder{grid-template-columns:1fr}
+  .founder-photo{
+    min-height:560px;
+    border-right:0;
+    border-bottom:1px solid #33342f;
+    background-position:center;
+  }
+  .founder-main{min-height:470px}
+}
+@media(max-width:560px){
+  .projects-grid .project-card{min-height:270px}
+  .projects-grid .project-main h3{font-size:15vw}
+  .founder-photo{min-height:430px}
+  .founder-main{min-height:420px;padding:34px 4vw 46px}
+  .founder-copy h2{font-size:16vw}
+  .section-breath{height:56px}
+}
