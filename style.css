@@ -784,3 +784,96 @@ footer small{
   .founder-copy h2{font-size:16vw}
   .section-breath{height:56px}
 }
+
+/* Official identity marks inside Curated Concepts */
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+.projects-grid .project-main{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-width:0;
+}
+.project-label{
+  font:500 8px/1.2 "IBM Plex Mono",monospace;
+  letter-spacing:.15em;
+  color:var(--muted);
+}
+.project-logo-box{
+  min-height:155px;
+  display:flex;
+  align-items:center;
+  margin:24px 0 22px;
+}
+.project-logo{
+  display:block;
+  width:auto;
+  max-width:92%;
+  max-height:126px;
+  height:auto;
+  object-fit:contain;
+  object-position:left center;
+  filter:none!important;
+  opacity:1!important;
+  mix-blend-mode:normal!important;
+  transition:transform .45s ease;
+}
+.project-logo-electro{max-width:96%;max-height:110px}
+.project-logo-house{max-width:86%;max-height:132px}
+.project-logo-techno{max-width:90%;max-height:118px}
+.project-logo-minimal{max-width:90%;max-height:112px}
+
+.projects-grid .project-card{
+  min-height:390px;
+  align-items:stretch;
+}
+.projects-grid .project-card:hover .project-logo{transform:translateX(6px)}
+.projects-grid .project-card:hover .project-arrow{transform:translate(3px,-3px)}
+.projects-grid .project-arrow{transition:transform .35s ease}
+
+.project-electro{background:#f1f0ea}
+.project-house{background:#dde1d1}
+.project-techno{
+  background:#141510;
+  color:#f5f4ef;
+}
+.project-minimal{
+  background:#171519;
+  color:#f5f4ef;
+}
+.project-electro:hover{background:#e8e7e0}
+.project-house:hover{background:#d4d9c5}
+.project-techno:hover{background:#1a1b16}
+.project-minimal:hover{background:#1e1b21}
+
+.project-techno .project-no,
+.project-techno .project-label,
+.project-minimal .project-no,
+.project-minimal .project-label{color:#8f9189}
+.project-techno .project-main p,
+.project-minimal .project-main p{color:#b8b8b1}
+.project-techno:before,
+.project-minimal:before{border-color:#343630}
+
+@media(max-width:900px){
+  .project-logo-box{min-height:132px;margin:20px 0}
+  .project-logo{max-height:108px}
+  .project-logo-house{max-height:118px}
+}
+@media(max-width:560px){
+  .projects-grid .project-card{min-height:300px}
+  .project-logo-box{min-height:105px;margin:16px 0 18px}
+  .project-logo{max-width:94%;max-height:90px}
+  .project-logo-house{max-width:86%;max-height:96px}
+  .project-main p{margin-top:14px}
+}
