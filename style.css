@@ -877,3 +877,46 @@ footer small{
   .project-logo-house{max-width:86%;max-height:96px}
   .project-main p{margin-top:14px}
 }
+
+/* Final concept-logo color treatment */
+.project-techno{
+  background:#e8e7e1;
+  color:var(--ink);
+}
+.project-techno:hover{background:#deddd6}
+.project-techno .project-no,
+.project-techno .project-label{color:var(--muted)}
+.project-techno .project-main p{color:var(--muted)}
+.project-techno:before{border-color:#c7c6be}
+
+.project-minimal{
+  background:#ece9f1;
+  color:var(--ink);
+}
+.project-minimal:hover{background:#e4deed}
+.project-minimal .project-no,
+.project-minimal .project-label{color:#74706f}
+.project-minimal .project-main p{color:#666268}
+.project-minimal:before{border-color:#c9c1d4}
+
+.project-logo-box-minimal{position:relative}
+.minimal-logo-stack{
+  position:relative;
+  width:min(100%,760px);
+  line-height:0;
+}
+.minimal-logo-stack .project-logo{
+  width:100%;
+  max-width:none;
+  max-height:none;
+}
+.minimal-logo-base{
+  position:relative;
+  filter:brightness(0)!important;
+}
+.minimal-logo-purple{
+  position:absolute;
+  inset:0;
+  filter:none!important;
+  clip-path:inset(0 0 0 72%);
+}
