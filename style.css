@@ -982,3 +982,119 @@ footer small{
   .radio-art-wrap{aspect-ratio:1/1}
   .radio-art-copy h3{font-size:12vw}
 }
+
+/* Radio shows — full artwork, breathing room, partner links */
+.radio-head{
+  grid-template-columns:70px minmax(0,1fr) minmax(280px,.72fr);
+}
+.radio-partner-links{
+  justify-self:end;
+  align-self:end;
+  width:min(100%,360px);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.radio-partner-links span{
+  font:500 8px/1.45 "IBM Plex Mono",monospace;
+  letter-spacing:.12em;
+  color:var(--muted);
+}
+.radio-partner-links a{
+  width:max-content;
+  max-width:100%;
+  padding-bottom:5px;
+  border-bottom:1px solid var(--ink);
+  font:500 9px/1.35 "IBM Plex Mono",monospace;
+  letter-spacing:.1em;
+}
+.radio-grid-art{
+  width:min(1180px,92vw);
+  margin:0 auto 90px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  border:0;
+  background:transparent;
+}
+.radio-art-card{
+  min-width:0;
+  border:1px solid var(--line)!important;
+  background:var(--paper-2)!important;
+  overflow:hidden;
+}
+.radio-art-wrap{
+  aspect-ratio:4/5;
+  padding:14px;
+  background:#111;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.radio-art-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  filter:none!important;
+  transform:none!important;
+  background:#111;
+}
+.radio-art-copy{
+  padding:22px 22px 24px;
+  min-height:220px;
+}
+.radio-art-copy h3{
+  margin:34px 0 14px;
+  font-size:clamp(30px,3vw,46px);
+}
+.radio-listen-link{
+  margin-top:auto;
+  padding-top:22px;
+  width:max-content;
+  max-width:100%;
+  border-bottom:1px solid var(--ink);
+  font:500 9px/1.35 "IBM Plex Mono",monospace;
+  letter-spacing:.1em;
+}
+@media(max-width:980px){
+  .radio-head{grid-template-columns:54px 1fr}
+  .radio-partner-links{
+    grid-column:2;
+    justify-self:start;
+    width:auto;
+    margin-top:22px;
+  }
+  .radio-grid-art{
+    width:min(760px,90vw);
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .radio-art-card:last-child{
+    grid-column:1/-1;
+    width:min(360px,100%);
+    justify-self:center;
+  }
+}
+@media(max-width:640px){
+  .radio-grid-art{
+    width:min(92vw,420px);
+    grid-template-columns:1fr;
+    gap:26px;
+    margin-bottom:70px;
+  }
+  .radio-art-card:last-child{
+    grid-column:auto;
+    width:100%;
+  }
+  .radio-art-wrap{
+    aspect-ratio:4/5;
+    padding:12px;
+  }
+  .radio-art-copy{
+    min-height:190px;
+    padding:20px 18px 22px;
+  }
+}
