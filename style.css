@@ -983,7 +983,7 @@ footer small{
   .radio-art-copy h3{font-size:12vw}
 }
 
-/* Radio shows — full artwork, breathing room, partner links */
+/* Radio shows — refined editorial grid */
 .radio-head{
   grid-template-columns:70px minmax(0,1fr) minmax(280px,.72fr);
 }
@@ -1009,55 +1009,78 @@ footer small{
   letter-spacing:.1em;
 }
 .radio-grid-art{
-  width:min(1180px,92vw);
-  margin:0 auto 90px;
+  width:min(1220px,90vw);
+  margin:0 auto 100px;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:28px;
+  gap:42px;
   border:0;
   background:transparent;
+  align-items:start;
 }
 .radio-art-card{
+  width:100%;
+  max-width:340px;
+  justify-self:center;
   min-width:0;
   border:1px solid var(--line)!important;
-  background:var(--paper-2)!important;
+  background:var(--paper)!important;
   overflow:hidden;
+  display:flex;
+  flex-direction:column;
 }
 .radio-art-wrap{
   aspect-ratio:4/5;
-  padding:14px;
-  background:#111;
-  border-bottom:1px solid var(--line);
+  padding:18px 18px 8px;
+  background:var(--paper);
+  border-bottom:0;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
 }
 .radio-art-wrap img{
+  display:block;
   width:100%;
-  height:100%;
+  height:auto;
+  max-height:430px;
   object-fit:contain;
   object-position:center;
-  filter:none!important;
-  transform:none!important;
-  background:#111;
+  background:transparent;
+  box-shadow:0 10px 30px rgba(0,0,0,.10);
 }
 .radio-art-copy{
-  padding:22px 22px 24px;
-  min-height:220px;
+  padding:16px 18px 22px;
+  min-height:auto;
+  display:flex;
+  flex-direction:column;
+}
+.radio-art-copy span{
+  font:500 8px "IBM Plex Mono",monospace;
+  letter-spacing:.13em;
+  color:var(--muted);
 }
 .radio-art-copy h3{
-  margin:34px 0 14px;
-  font-size:clamp(30px,3vw,46px);
+  margin:18px 0 10px;
+  font-size:clamp(24px,2vw,34px);
+  line-height:.95;
+  letter-spacing:-.04em;
+  font-weight:500;
+}
+.radio-art-copy p{
+  margin:0;
+  font:500 9px/1.5 "IBM Plex Mono",monospace;
+  letter-spacing:.08em;
+  color:var(--muted);
 }
 .radio-listen-link{
-  margin-top:auto;
-  padding-top:22px;
+  margin-top:18px;
   width:max-content;
   max-width:100%;
   border-bottom:1px solid var(--ink);
   font:500 9px/1.35 "IBM Plex Mono",monospace;
   letter-spacing:.1em;
+  padding-bottom:4px;
 }
 @media(max-width:980px){
   .radio-head{grid-template-columns:54px 1fr}
@@ -1069,32 +1092,33 @@ footer small{
   }
   .radio-grid-art{
     width:min(760px,90vw);
-    grid-template-columns:1fr 1fr;
-    gap:24px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
   }
   .radio-art-card:last-child{
     grid-column:1/-1;
-    width:min(360px,100%);
+    width:min(340px,100%);
     justify-self:center;
   }
 }
 @media(max-width:640px){
   .radio-grid-art{
-    width:min(92vw,420px);
+    width:min(92vw,380px);
     grid-template-columns:1fr;
-    gap:26px;
+    gap:28px;
     margin-bottom:70px;
   }
+  .radio-art-card{max-width:100%}
   .radio-art-card:last-child{
     grid-column:auto;
     width:100%;
   }
   .radio-art-wrap{
-    aspect-ratio:4/5;
-    padding:12px;
+    padding:16px 16px 6px;
   }
+  .radio-art-wrap img{max-height:420px}
   .radio-art-copy{
-    min-height:190px;
-    padding:20px 18px 22px;
+    padding:14px 16px 20px;
   }
+  .radio-art-copy h3{font-size:11vw}
 }
