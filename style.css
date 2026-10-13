@@ -1122,3 +1122,63 @@ footer small{
   }
   .radio-art-copy h3{font-size:11vw}
 }
+
+/* Refined non-emoji arrow system */
+.project-arrow{
+  position:relative;
+  width:28px;
+  height:28px;
+  justify-self:end;
+  align-self:start;
+  font-size:0!important;
+  color:currentColor;
+}
+.project-arrow::before{
+  content:"";
+  position:absolute;
+  width:17px;
+  height:1.5px;
+  background:currentColor;
+  left:4px;
+  top:14px;
+  transform:rotate(-45deg);
+  transform-origin:center;
+}
+.project-arrow::after{
+  content:"";
+  position:absolute;
+  width:9px;
+  height:9px;
+  border-top:1.5px solid currentColor;
+  border-right:1.5px solid currentColor;
+  right:3px;
+  top:3px;
+}
+.link-arrow{
+  display:inline-block;
+  position:relative;
+  width:12px;
+  height:12px;
+  margin-left:5px;
+  vertical-align:-1px;
+}
+.link-arrow::before{
+  content:"";
+  position:absolute;
+  width:8px;
+  height:1px;
+  background:currentColor;
+  left:1px;
+  top:6px;
+  transform:rotate(-45deg);
+}
+.link-arrow::after{
+  content:"";
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-top:1px solid currentColor;
+  border-right:1px solid currentColor;
+  right:0;
+  top:1px;
+}
