@@ -600,7 +600,7 @@ footer small{
   height:100%;
   background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_59%20p.m.jpg");
   background-size:cover;
-  background-position:center;
+  background-position:52% center;
   background-repeat:no-repeat;
   filter:none;
 }
@@ -612,9 +612,17 @@ footer small{
   background-position:center;
   background-repeat:no-repeat;
 }
-.story-photo-crowd{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.31%20AM%20%281%29.jpeg")}
-.story-photo-dj{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%283%29.jpeg");filter:none}
-.story-photo-booth{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%282%29.jpeg");filter:none}
+.story-photo-crowd{
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.29%20AM%20%281%29.jpeg")
+}
+.story-photo-dj{
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%283%29.jpeg");
+  filter:none
+}
+.story-photo-booth{
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%282%29.jpeg");
+  filter:none
+}
 .story-grid figure:hover .story-photo-dj,
 .story-grid figure:hover .story-photo-booth{
   filter:none;
@@ -1452,4 +1460,74 @@ footer small{
 @media(max-width:560px){
   .hero-photo-local,
   .photo-wash{inset:10px}
+}
+
+/* Photography composition pass — full bleed, deliberate crops */
+.hero-photo-local{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background-size:cover!important;
+  background-position:52% 50%!important;
+  background-color:#0d0e0c;
+}
+.photo-wash{
+  inset:0!important;
+  background:linear-gradient(180deg,rgba(10,10,8,.015),rgba(10,10,8,.08));
+}
+
+.story-main{
+  min-height:660px;
+  background:#0f100e;
+}
+.story-photo-crowd{
+  background-size:cover!important;
+  background-position:center 46%!important;
+  background-color:#0f100e;
+}
+
+.story-side{
+  min-height:660px;
+}
+.story-grid{
+  min-height:470px;
+}
+.story-grid figure{
+  min-height:470px;
+  background:#11120f;
+}
+.story-photo-dj,
+.story-photo-booth{
+  width:100%;
+  height:100%;
+  min-height:470px;
+  background-size:cover!important;
+  background-repeat:no-repeat;
+}
+.story-photo-dj{
+  background-position:50% 36%!important;
+}
+.story-photo-booth{
+  background-position:46% 50%!important;
+}
+
+@media(max-width:900px){
+  .hero-photo-local{background-position:50% 50%!important}
+  .story-main{min-height:540px}
+  .story-side{min-height:auto}
+  .story-grid{min-height:520px}
+  .story-grid figure,
+  .story-photo-dj,
+  .story-photo-booth{min-height:520px}
+}
+@media(max-width:560px){
+  .hero-frame{min-height:540px}
+  .story-main{min-height:420px}
+  .story-grid{
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+  .story-grid figure,
+  .story-photo-dj,
+  .story-photo-booth{min-height:430px}
 }
