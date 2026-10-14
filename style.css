@@ -598,7 +598,7 @@ footer small{
   inset:0;
   width:100%;
   height:100%;
-  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%281%29.jpeg");
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_59%20p.m.jpg");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -613,7 +613,7 @@ footer small{
   background-repeat:no-repeat;
 }
 .story-photo-crowd{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.31%20AM%20%281%29.jpeg")}
-.story-photo-dj{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.27%20AM.jpeg");filter:none}
+.story-photo-dj{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%283%29.jpeg");filter:none}
 .story-photo-booth{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%282%29.jpeg");filter:none}
 .story-grid figure:hover .story-photo-dj,
 .story-grid figure:hover .story-photo-booth{
@@ -636,11 +636,11 @@ footer small{
   background-repeat:no-repeat;
 }
 .culture-photo-community{
-  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%282%29.jpeg");
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.29%20AM%20%283%29.jpeg");
   border-right:1px solid var(--line);
 }
 .culture-photo-movement{
-  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%283%29.jpeg");
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%281%29.jpeg");
   border-left:1px solid var(--line);
 }
 .culture-copy{
@@ -1405,4 +1405,51 @@ footer small{
 }
 @media(max-width:900px){
   .partner-logo-link{width:min(210px,72%)!important}
+}
+
+/* Homepage photography — preserve full compositions, no destructive crops */
+.hero-frame{
+  background:#0d0e0c;
+}
+.hero-photo-local{
+  inset:22px;
+  width:auto;
+  height:auto;
+  background-size:contain!important;
+  background-position:center!important;
+  background-color:#0d0e0c;
+}
+.photo-wash{
+  inset:22px;
+  background:linear-gradient(180deg,rgba(10,10,8,.02),rgba(10,10,8,.08));
+}
+.story-main{
+  background:#0f100e;
+}
+.story-photo-crowd{
+  background-size:contain!important;
+  background-position:center!important;
+  background-color:#0f100e;
+}
+.story-grid figure{
+  background:#11120f;
+}
+.story-photo-dj,
+.story-photo-booth{
+  background-size:contain!important;
+  background-position:center!important;
+  background-color:#11120f;
+}
+.culture-photo{
+  background-color:#11120f;
+  background-size:contain!important;
+  background-position:center!important;
+}
+@media(max-width:900px){
+  .hero-photo-local,
+  .photo-wash{inset:16px}
+}
+@media(max-width:560px){
+  .hero-photo-local,
+  .photo-wash{inset:10px}
 }
