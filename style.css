@@ -598,7 +598,7 @@ footer small{
   inset:0;
   width:100%;
   height:100%;
-  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_59%20p.m.jpg");
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%281%29.jpeg");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -612,9 +612,9 @@ footer small{
   background-position:center;
   background-repeat:no-repeat;
 }
-.story-photo-crowd{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_15%20p.m.jpg")}
-.story-photo-dj{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_51_07%20p.m.jpg");filter:none}
-.story-photo-booth{background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_51%20p.m.jpg");filter:none}
+.story-photo-crowd{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.31%20AM%20%281%29.jpeg")}
+.story-photo-dj{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.27%20AM.jpeg");filter:none}
+.story-photo-booth{background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.30%20AM%20%282%29.jpeg");filter:none}
 .story-grid figure:hover .story-photo-dj,
 .story-grid figure:hover .story-photo-booth{
   filter:none;
@@ -636,11 +636,11 @@ footer small{
   background-repeat:no-repeat;
 }
 .culture-photo-community{
-  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_27%20p.m.jpg");
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%282%29.jpeg");
   border-right:1px solid var(--line);
 }
 .culture-photo-movement{
-  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_39%20p.m.jpg");
+  background-image:url("assets/logos/lab%20sessions%20events%20nice%20fotos/WhatsApp%20Image%202026-10-14%20at%201.44.28%20AM%20%283%29.jpeg");
   border-left:1px solid var(--line);
 }
 .culture-copy{
@@ -1352,4 +1352,57 @@ footer small{
     flex-direction:column;
   }
   .radio-art-card .radio-player-panel iframe{height:295px}
+}
+
+/* House Attack partnership identity */
+.radio-partner-links{
+  width:min(100%,390px);
+  gap:9px;
+}
+.partner-kicker{
+  color:var(--muted)!important;
+}
+.partner-logo-link{
+  border:0!important;
+  padding:0!important;
+  width:min(230px,80%)!important;
+  display:block;
+  margin:5px 0 4px;
+}
+.partner-logo{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:74px;
+  object-fit:contain;
+  object-position:left center;
+  filter:none!important;
+  transform:none!important;
+}
+.partner-note{
+  max-width:330px;
+  color:#777970!important;
+  font:500 7.5px/1.45 "IBM Plex Mono",monospace!important;
+  letter-spacing:.1em!important;
+}
+.hero-photo-local{
+  background-position:center 46%;
+}
+.story-photo-crowd{
+  background-position:center 54%;
+}
+.story-photo-dj{
+  background-position:center;
+}
+.story-photo-booth{
+  background-position:center;
+}
+.culture-photo-community{
+  background-position:center;
+}
+.culture-photo-movement{
+  background-position:center;
+}
+@media(max-width:900px){
+  .partner-logo-link{width:min(210px,72%)!important}
 }
