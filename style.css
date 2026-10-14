@@ -1315,3 +1315,41 @@ footer small{
   .mini-eq i{animation:none!important}
   .radio-art-wrap img,.radio-player-panel,.radio-toggle-icon::after{transition:none!important}
 }
+
+/* Radio archives permanently visible */
+.radio-actions-static{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.radio-live-label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:var(--radio-accent);
+  font:500 8px/1.2 "IBM Plex Mono",monospace;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+.mini-eq.is-active i{
+  animation:tlsEq .75s ease-in-out infinite alternate;
+}
+.radio-player-panel.is-visible{
+  max-height:none!important;
+  opacity:1!important;
+  overflow:visible!important;
+  transform:none!important;
+  margin-top:20px!important;
+}
+.radio-art-card .radio-player-panel iframe{
+  height:315px;
+}
+.radio-session-toggle{display:none!important}
+@media(max-width:640px){
+  .radio-actions-static{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .radio-art-card .radio-player-panel iframe{height:295px}
+}
