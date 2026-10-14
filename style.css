@@ -1531,3 +1531,146 @@ footer small{
   .story-photo-dj,
   .story-photo-booth{min-height:430px}
 }
+
+/* FINAL PHOTO GRID — proportional source images, full cells, no tiny crops */
+.photo-story{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.75fr) minmax(360px,.75fr)!important;
+  align-items:start!important;
+  background:var(--paper-2)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.story-main{
+  position:relative!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  border-right:1px solid var(--line)!important;
+  background:#11120f!important;
+}
+.story-img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:3 / 2!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:none!important;
+  transform:none!important;
+}
+.story-img-main{
+  object-fit:cover!important;
+  object-position:center 50%!important;
+}
+.story-main span{
+  left:22px!important;
+  bottom:20px!important;
+}
+.story-side{
+  min-height:0!important;
+  display:grid!important;
+  grid-template-rows:92px auto!important;
+  background:var(--paper-2)!important;
+}
+.story-label{
+  height:92px!important;
+  box-sizing:border-box!important;
+  padding:18px 24px 16px!important;
+  border-bottom:1px solid var(--line)!important;
+  overflow:hidden!important;
+}
+.story-label span{
+  font-size:8px!important;
+}
+.story-label p{
+  margin:10px 0 0!important;
+  max-width:none!important;
+  font-size:21px!important;
+  line-height:.95!important;
+}
+.story-grid{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  grid-template-rows:auto auto!important;
+  min-height:0!important;
+}
+.story-grid figure{
+  margin:0!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  position:relative!important;
+  border-right:0!important;
+  border-bottom:1px solid var(--line)!important;
+  background:#11120f!important;
+}
+.story-grid figure:last-child{border-bottom:0!important}
+.story-grid .story-img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:3 / 2!important;
+  object-fit:cover!important;
+}
+.story-img-dj{object-position:center 50%!important}
+.story-img-booth{object-position:center 50%!important}
+.story-grid figure:hover .story-img{
+  transform:none!important;
+  filter:none!important;
+}
+
+/* HERO PHOTO — keep the earlier DJ image, show more of the source */
+.hero{
+  grid-template-columns:minmax(0,.9fr) minmax(560px,1.1fr)!important;
+  min-height:690px!important;
+}
+.hero-copy,
+.hero-frame{
+  min-height:690px!important;
+}
+.hero-photo-local{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background-image:url("Imagen%20de%20ChatGPT%207%20oct%202026%2C%2007_50_59%20p.m.jpg")!important;
+  background-size:cover!important;
+  background-position:48% 50%!important;
+  background-repeat:no-repeat!important;
+}
+@media(max-width:1080px){
+  .hero{
+    grid-template-columns:1fr 1fr!important;
+    min-height:650px!important;
+  }
+  .hero-copy,.hero-frame{min-height:650px!important}
+  .photo-story{
+    grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr)!important;
+  }
+  .story-side{grid-template-rows:88px auto!important}
+  .story-label{height:88px!important;padding:16px 20px!important}
+  .story-label p{font-size:19px!important}
+}
+@media(max-width:900px){
+  .photo-story{grid-template-columns:1fr!important}
+  .story-main{border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .story-side{grid-template-rows:auto auto!important}
+  .story-label{
+    height:auto!important;
+    min-height:112px!important;
+    padding:24px 5vw!important;
+  }
+  .story-grid{
+    grid-template-columns:1fr 1fr!important;
+    grid-template-rows:auto!important;
+  }
+  .story-grid figure{
+    border-bottom:0!important;
+    border-right:1px solid var(--line)!important;
+  }
+  .story-grid figure:last-child{border-right:0!important}
+}
+@media(max-width:560px){
+  .story-grid{grid-template-columns:1fr!important}
+  .story-grid figure{
+    border-right:0!important;
+    border-bottom:1px solid var(--line)!important;
+  }
+  .story-grid figure:last-child{border-bottom:0!important}
+}
